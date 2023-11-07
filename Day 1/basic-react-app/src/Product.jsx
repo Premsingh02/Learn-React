@@ -1,8 +1,9 @@
 import "./Product.css"
 
 function Product({title, price, features, features2}) {
+    let styles = {backgroundColor : price > 30000 ? "yellow" : ""};
     return (
-        <div className="Product">
+        <div className="Product" style={styles}>
             <h3>{title}</h3>
             <h5>Price : {price}</h5>
             {price > 30000 ? <p>"Discount of 5%"</p> : null}
@@ -10,5 +11,5 @@ function Product({title, price, features, features2}) {
     );        
     
 }
-
+ 
 export default Product; 
