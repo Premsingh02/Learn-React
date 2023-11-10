@@ -1,12 +1,19 @@
 import { useState } from 'react'
 import './App.css'
-import Person from './Person'
+import Tile from './Tile';
 
 function App() {
-
   return (
     <>
-      <Person name="Aarav kumar" age="22"/>
+      <div>
+        <h1>Welcome to react</h1>
+        <span>How r u doing ?</span>
+        <Tile />
+        <Tile />
+        <Tile />
+        <Tile />
+        <Tile />
+      </div>
     </>
   )
 }
