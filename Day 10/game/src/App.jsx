@@ -4,6 +4,7 @@ import { useState } from 'react';
 function App() {
   let [count, setCount] = useState(0);
   let [counter, setCounter] = useState(0);
+  const condition = false;
 
   function clickedIncrement() {  
     setCount(count+1);
@@ -21,14 +22,16 @@ function App() {
   }
 
   function clickedCounterDecrement() {
-    setCounter(counter-1);
+    setCounter(counter-1); 
     console.log("clicked on decrement", counter);
   }
-
+  if (condition == true){
+    return <div>Hello</div>
+  }
   return (
     <>
       <div>
-        value of Count: {count}
+        value of Count: {count} which is a { (count % 2 == 0) ? 'Even' : 'Odd'} value
       </div>
       <button onClick={clickedIncrement}>Increment</button>
       <button onClick={clickedDecrement}>Decrement</button>
